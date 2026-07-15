@@ -76,7 +76,7 @@ p{max-width:590px;margin:0 auto 16px}
 .photo-block{min-height:78svh;display:flex;align-items:flex-end;position:relative;color:white;padding:34px 22px}
 .photo-block::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(12,10,9,.78))}
 .photo-block.bowling{background:url("assets/bowling.jpg") center/cover}
-.photo-block.service{background:url("assets/matvey_forest.jpg") center 35%/cover}
+.photo-block.service{background:url("assets/matvey_service_2026.jpg") center 35%/cover}
 .photo-copy{position:relative;max-width:560px}
 .photo-copy h2{color:#fff}
 .atmosphere{background:#eee5dc}
