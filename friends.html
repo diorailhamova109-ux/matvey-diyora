@@ -5,9 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f4efe9">
 <title>Матвей & Диёра — мы женимся</title>
-<link rel="stylesheet" href="styles.css?v=20260715-final">
+<link rel="stylesheet" href="styles.css?v=20260715-music">
 </head>
-<body>
+<body class="intro-open">
+<div class="music-intro" id="musicIntro" role="dialog" aria-modal="true" aria-labelledby="musicIntroTitle">
+  <div class="music-intro-card">
+    <div class="music-intro-heart">♡</div>
+    <div class="kicker">Перед просмотром</div>
+    <h2 id="musicIntroTitle">Включить нашу песню?</h2>
+    <p>Мы подготовили для вас небольшую историю. С музыкой она станет ещё теплее.</p>
+    <div class="music-intro-track">Каспийский Груз — Любовь</div>
+    <button class="music-intro-primary" id="startMusic" type="button">♫ Включить музыку</button>
+    <button class="music-intro-secondary" id="skipMusic" type="button">Продолжить без музыки</button>
+  </div>
+</div>
+
 <main class="site">
 <section class="hero">
   <div class="hero-content reveal">
@@ -113,6 +125,14 @@
   </div>
 </section>
 </main>
-<script src="script.js?v=20260715-final"></script>
+<audio id="weddingAudio" preload="metadata" loop>
+  <source src="assets/our-song.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Включить музыку" title="Музыка">
+  <span class="music-toggle-icon">♫</span>
+  <span class="music-toggle-label">Наша песня</span>
+</button>
+
+<script src="script.js?v=20260715-music"></script>
 </body>
 </html>

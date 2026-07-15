@@ -116,3 +116,43 @@ p{max-width:590px;margin:0 auto 16px}
   .story-portraits{gap:10px}
   .story-portrait{border-radius:20px}
 }
+
+/* Music intro and player */
+body.intro-open{overflow:hidden}
+.music-intro{
+  position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:22px;
+  background:rgba(24,21,19,.68);backdrop-filter:blur(12px);
+  transition:opacity .55s ease,visibility .55s ease;
+}
+.music-intro.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.music-intro-card{
+  width:min(100%,430px);text-align:center;background:rgba(251,248,244,.97);
+  border:1px solid rgba(255,255,255,.72);border-radius:30px;padding:36px 26px 28px;
+  box-shadow:0 28px 90px rgba(0,0,0,.28);transform:translateY(0);transition:transform .55s ease;
+}
+.music-intro.is-hidden .music-intro-card{transform:translateY(18px)}
+.music-intro-heart{font-family:Georgia,serif;font-size:38px;color:var(--brown);line-height:1;margin-bottom:8px}
+.music-intro-card h2{font-size:clamp(38px,10vw,54px);margin:10px 0 16px}
+.music-intro-card p{font-size:15px;color:var(--muted);margin-bottom:15px}
+.music-intro-track{font-family:Georgia,serif;font-style:italic;font-size:18px;margin:12px 0 24px}
+.music-intro-primary,.music-intro-secondary{
+  width:100%;min-height:54px;border-radius:999px;border:0;font:inherit;font-weight:700;cursor:pointer;
+}
+.music-intro-primary{background:var(--deep);color:#fff;box-shadow:0 14px 30px rgba(24,21,19,.2)}
+.music-intro-secondary{margin-top:10px;background:transparent;color:var(--muted)}
+.music-toggle{
+  position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:9000;
+  display:flex;align-items:center;gap:9px;min-height:48px;padding:0 16px;border:1px solid rgba(255,255,255,.6);
+  border-radius:999px;background:rgba(24,21,19,.86);color:#fff;backdrop-filter:blur(12px);
+  box-shadow:0 12px 35px rgba(0,0,0,.22);font:inherit;font-size:12px;font-weight:700;cursor:pointer;
+  opacity:0;transform:translateY(10px);pointer-events:none;transition:.35s ease;
+}
+.music-toggle.is-visible{opacity:1;transform:none;pointer-events:auto}
+.music-toggle-icon{font-size:19px;line-height:1}
+.music-toggle.is-playing .music-toggle-icon{animation:musicPulse 1.2s ease-in-out infinite}
+@keyframes musicPulse{50%{transform:scale(1.16)}}
+@media(max-width:520px){
+  .music-intro-card{padding:32px 20px 24px;border-radius:26px}
+  .music-toggle{width:48px;padding:0;justify-content:center}
+  .music-toggle-label{display:none}
+}
