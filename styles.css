@@ -156,3 +156,34 @@ body.intro-open{overflow:hidden}
   .music-toggle{width:48px;padding:0;justify-content:center}
   .music-toggle-label{display:none}
 }
+
+/* Telegram + MAX block */
+.telegram h2{margin-bottom:16px}
+.messenger-intro{max-width:540px;font-size:16px;line-height:1.65;color:rgba(255,255,255,.78)!important}
+.messenger-card{max-width:590px;margin-left:auto;margin-right:auto;padding:30px 24px 24px}
+.messenger-card .tg-title{font-size:30px}
+.messenger-card>p{max-width:440px;font-size:15px;line-height:1.6;margin-bottom:0}
+.messenger-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.messenger-button{display:flex;align-items:center;gap:12px;min-height:66px;padding:10px 16px;border:1px solid rgba(255,255,255,.3);border-radius:18px;background:rgba(255,255,255,.1);color:#fff;text-decoration:none;text-align:left;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.messenger-button:hover{transform:translateY(-2px);background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.48)}
+.messenger-icon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.94);color:#2e251f}
+.messenger-icon svg{width:21px;height:21px;fill:currentColor}
+.max-icon{font-family:Arial,sans-serif;font-size:18px;font-weight:800}
+.messenger-button strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.1;font-weight:600}
+.messenger-button small{display:block;margin-top:4px;color:rgba(255,255,255,.65);font-size:11px;letter-spacing:.04em}
+.messenger-note{margin-top:18px;font-size:11px;line-height:1.5;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.48)}
+@media(max-width:520px){
+  .telegram{padding-left:18px;padding-right:18px}
+  .telegram h2{font-size:clamp(36px,11vw,48px)}
+  .messenger-intro{font-size:14px;line-height:1.6}
+  .messenger-card{padding:24px 16px 18px;border-radius:24px}
+  .messenger-card .tg-title{font-size:27px}
+  .messenger-card>p{font-size:13px}
+  .messenger-actions{gap:9px;margin-top:20px}
+  .messenger-button{min-height:60px;padding:9px 11px;gap:9px;border-radius:16px}
+  .messenger-icon{width:32px;height:32px;flex-basis:32px}
+  .messenger-icon svg{width:18px;height:18px}
+  .messenger-button strong{font-size:15px}
+  .messenger-button small{font-size:9px}
+  .messenger-note{font-size:9px;margin-top:14px}
+}
